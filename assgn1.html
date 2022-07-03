@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment1-Contact form</title>
+    <style>
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+      }
+
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: whitesmoke;
+
+      }
+
+
+      .home {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        /* background-color: whitesmoke; */
+        padding-top: 15em;
+        padding-bottom: 15em;
+        padding-left: 2em;
+      }
+      .home-para {
+        color: rgb(66, 66, 66);
+        position: relative;
+        /* margin-left: 0.5em; */
+        font-size: 4em;
+        font-weight: 700;
+      }
+      .home-col1-button {
+        margin-top: 2em;
+        /* margin-left: 1.2em; */
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 30px;
+        background-color: rgb(35, 172, 252);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .home-col1-button:hover {
+        opacity: 0.8;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .home-col1-button:active {
+        opacity: 0.6;
+      }
+      .home-col2-img {
+        width: 25em;
+        border-radius: 250px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        /* margin-bottom: 100px;
+        margin-top: 50px; */
+      }
+      .project-button {
+        margin-top: 1em;
+        /* margin-left: 1.2em; */
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        background-color: rgb(35, 172, 252);
+        border: none;
+        border-radius: 2px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .project-card-title {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+        color: rgb(66, 66, 66);
+      }
+      .project-row1 {
+        margin-bottom: 80px;
+        justify-content: space-between;
+      }
+      .project-row2 {
+        margin-bottom: 120px;
+        justify-content: space-between;
+      }
+
+      .project-col1-row1,
+      .project-col1-row2,
+      .project-col1-row3,
+      .project-col2-row1,
+      .project-col2-row2,
+      .project-col2-row3 {
+        flex: 1;
+        padding: 20px 20px;
+        align-items: center;
+      }
+
+      .project-col1-row1:hover,
+      .project-col1-row2:hover,
+      .project-col1-row3:hover,
+      .project-col2-row1:hover,
+      .project-col2-row2:hover,
+      .project-col2-row3:hover {
+        border-radius: 10px;
+        background-color: rgb(231, 231, 231);
+      }
+      /* .project-col1-row1,
+      .project-col2-row1 {
+        margin-left: 30px;
+      } */
+      .project-all-divs {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+      }
+
+      .skills {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        margin-top: 0.2em;
+        margin-bottom: 0.7em;
+        background-color: whitesmoke;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        padding-left: 2em;
+      }
+      .skills-header {
+        text-align: center;
+        font-size: 4.5em;
+        font-weight: 700;
+        color: rgb(66, 66, 66);
+        margin-bottom: 3em;
+      }
+      .skills-row1-col1,
+      .skills-row1-col2,
+      .skills-row2-col1,
+      .skills-row2-col2,
+      .skills-row3-col1,
+      .skills-row-2-3-col2 {
+        padding: 10px 15px;
+        border-radius: 5px;
+        /* background-color: gray; */
+      }
+      .skills-row1-col1:hover,
+      .skills-row1-col2:hover,
+      .skills-row2-col1:hover,
+      .skills-row2-col2:hover,
+      .skills-row3-col1:hover,
+      .skills-row-2-3-col2:hover {
+        background-color: rgb(231, 231, 231);
+      }
+      .skills-row1-col1-p {
+        color: rgb(66, 66, 66);
+        font-size: 2.5em;
+        margin-bottom: 0.8em;
+        font-weight: 700;
+      }
+      .skills-para {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      .skills-row-2-3 {
+        margin-bottom: 200px;
+      }
+
+      .contact-section {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        border-color: black;
+        border-width: 10px;
+        border-radius: 50px;
+        background-color: whitesmoke;
+      }
+      .contact-row1 {
+        background-color: rgb(253, 92, 92);
+        padding-top: 8%;
+        padding-bottom: 8%;
+        margin-bottom: 4em;
+      }
+      .contact-para1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 0.1em;
+        color: rgb(66, 66, 66);
+        font-weight: 600;
+      }
+      .contact-para2 {
+        text-align: center;
+        color: whitesmoke;
+        font-size: 4.5em;
+        font-weight: 700;
+      }
+      .contact-para3-4 {
+        color: rgb(66, 66, 66);
+        font-size: 3em;
+        margin-bottom: 0em;
+        font-weight: 700;
+      }
+      .contact-row2 {
+        padding-left: 2em;
+      }
+      .contact-row3 {
+        padding-left: 2em;
+      }
+      .contact-row3-col1, .contact-row3-col2 {
+        color: rgb(66, 66, 66);
+        margin-top: 3em;
+        font-size: 2em;
+      }
+      .contact-row3-col1-box, .contact-row3-col2-box {
+        background-color: whitesmoke;
+        margin-top: 0.8em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 6em;
+        font-size: 1.2em;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: rgb(194, 193, 193);
+        transition: 0.3s;
+      }
+      .contact-row3-col1-box:hover, .contact-row3-col2-box:hover {
+        /* border-color: rgb(194, 193, 193); */
+        /* border-bottom: none; */
+        border-width: 0.2em;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        
+      }
+      .contact-row3-col1-box:active, .contact-row3-col2-box:active {
+        border-color: rgb(194, 193, 193);
+        /* background-color: yellow; */
+      }
+
+      .contact-submit {
+        margin-top: 3em;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 25px;
+        background-color: rgb(35, 172, 252);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .contact-submit:hover {
+        opacity: 0.8;
+      }
+      .contact-submit:active {
+        opacity: 0.6;
+      }
+
+      .contact-row3-col2-box {
+        padding-bottom: 6em;
+        padding-right: 7em;
+      }
+
+      .header {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;   /*determines which element will be in front(in 3D) */
+
+        background-color: black;
+        }
+
+      .left-section {
+          /* background-color: lightblue; */
+          /* width: 150px; */
+          display: flex;
+          align-items: center;
+          font-size: 1.5em;
+          color: rgb(35, 172, 252);
+          font-weight: 700;
+          margin-left: 20px;
+      }
+
+      .header-div-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+      }
+
+      .right-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-right: 20px;
+          flex-shrink: 0;
+      }
+
+      .header-button {
+        padding: 19px 8px;
+        font-size: 1.2em;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+        border: none;
+        /* background-color: red; */
+      }
+
+      .header-button:hover {
+        background-color: green;
+      }
+      /* .header-button:active {
+        background-color: green;
+      } */
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <div class="header">
+      <div class="left-section">
+        <div>Divya Raj</div>
+      </div>
+      <div class="right-section">
+        <a href="#intro-section">
+          <div class="header-div-container">
+            <button class="header-button">
+              <div>Intro Section</div>
+            </button>
+          </div>
+        </a>
+        <a href="#my-projects">
+          <div class="header-div-container">
+            <button class="header-button">
+              <div>My Projects</div>
+            </button>
+          </div>
+        </a>
+        <a href="#skills">
+          <div class="header-div-container">
+            <button class="header-button">
+              <div>Skills & Achievements</div>
+            </button>
+          </div>
+        </a>
+        <a href="#contact-me">
+          <div class="header-div-container">
+            <button class="header-button">
+              <div>Contact Me</div>
+            </button>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+
+    <!-- home-section -->
+    <div class="home" style="display: grid;
+        grid-template-columns: 1fr 1fr;" id="intro-section">
+        <div>
+          <p class="home-para">
+            Hi,
+          </p>
+          <p class="home-para">
+            I am <span style="color: rgb(35, 172, 252);">Divya Raj</span>
+          </p>
+          <p class="home-para">
+            <span style="font-size: 0.6em; color: rgb(95, 95, 95);">Web Developer</span>
+          </p>
+          <p class="home-para">
+            <span style="font-size: 0.6em; color: rgb(95, 95, 95);">Coding Enthusiast</span>
+            
+          </p>
+          <a href="#contact-me">
+            <button class="home-col1-button">Contact Me</button>
+          </a>
+        </div>
+        <div>
+          <!-- <img class="home-col2-img" src="exercise-image/image2.jpg";> -->
+          <img class="home-col2-img" src="assgn1-images/myimage.jpg";>
+        </div>
+    </div>
+
+    <hr style="border-width: 10px;">
+    <hr style="border-width: 10px;">
+
+    <!-- My Project section -->
+    <div class="contact-row1" id="my-projects">
+      <p class="contact-para2">
+        My Projects
+      </p>
+    </div>
+
+    <div class="project-all-divs" style="display: flex;
+    flex-direction: column;">
+      <div class="project-row1" style="display: flex;
+      flex-direction: row;">
+        <div class="project-col1-row1">
+          <div class="project-card-title">YouTube Clone</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/Youtube-logo.png">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+        <div class="project-col1-row2">
+          <div class="project-card-title">Twitter Clone</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/Twitter-Logo.webp">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+        <div class="project-col1-row3">
+          <div class="project-card-title">Facebook Clone</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/Facebook-Logo.webp">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-row2" style="display: flex;
+      flex-direction: row;">
+        <div class="project-col2-row1">
+          <div class="project-card-title">Ludo Game</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/ludogame.webp">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+        <div class="project-col2-row2">
+          <div class="project-card-title">Racing Game</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/bike-race.jpg">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+        <div class="project-col2-row3">
+          <div class="project-card-title">Mario game</div>
+          <div>
+            <img style="height: 90px;" src="assgn1-images/mario-game.jpg">
+          </div>
+          <div>
+            <button class="project-button">Visit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+
+
+    <hr style="border-width: 10px;">
+    <hr style="border-width: 10px;">
+
+    <!-- skills-achievement-section -->
+      <div class="contact-row1" id="skills">
+        <p class="contact-para2">
+          Skills & Achievements
+        </p>
+      </div>
+    <div class="skills">
+      <div>
+        <div class="skills-row1" style="display: grid;
+          grid-template-columns: 2fr 1fr;">
+          <div class="skills-row1-col1">
+            <p class="skills-row1-col1-p">Languages I conquered:</p>
+            <div style="padding-left: 20px;">
+            <img src="exercise-image/combined-all1.png" style="width: 300px;">
+            </div>
+            <p class="skills-para">Lorem Ipsum...</p>
+          </div>
+          <div class="skills-row1-col2">
+            <p class="skills-row1-col1-p">HTML</p>
+            <div style="padding-left: 20px;">
+              <img src="assgn1-images/python-logo.png" style="width: 100px;">
+            </div>
+            <p class="skills-para">Lorem Ipsum...</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills-row-2-3" style="display: grid;
+        grid-template-columns: 2fr 1fr;">
+        <div>
+          <div class="skills-row-2-3-col1">
+            <div class="skills-row2" style="display: grid;
+            grid-template-columns: 1fr 1fr;">
+            <!-- <p>Hello</p> -->
+              <div class="skills-row2-col1">
+                <p class="skills-row1-col1-p">MySQL</p>
+                <div style="padding-left: 20px;">
+                  <img src="assgn1-images/mysql-logo.png" style="width: 100px;">
+                </div>
+              <p class="skills-para">Lorem Ipsum...</p>
+              </div>
+              <div class="skills-row2-col2">
+                <p class="skills-row1-col1-p">Java</p>
+                <div style="padding-left: 20px;">
+                  <img src="assgn1-images/java-logo.webp" style="width: 100px;">
+                </div>
+                <p class="skills-para">Lorem Ipsum...</p>
+              </div>
+            </div>
+            <div class="skills-row3-col1">
+              <p class="skills-row1-col1-p">
+                C++
+              </p>
+              <div style="padding-left: 20px;">
+                <img src="assgn1-images/c++-logo.png" style="width: 100px;">
+              </div>
+              <p class="skills-para">Lorem Ipsum...</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="skills-row-2-3-col2">
+          <p class="skills-row1-col1-p">
+            Adobe Photoshop
+          </p>
+          <div style="padding-left: 20px;">
+            <img src="assgn1-images/photoshop-logo.png" style="width: 100px;">
+          </div>
+          <p class="skills-para">Lorem Ipsum...</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <hr style="border-width: 10px;">
+    <hr style="border-width: 10px;">
+    
+    <!-- contact-section -->
+    <div class="contact-section" id="contact-me">
+      <div class="contact-row1">
+        <p class="contact-para1">
+          Don't Be A Stranger
+        </p>
+        <p class="contact-para2">
+          Contact Me.
+        </p>
+      </div>
+      <div class="contact-row2">
+        <p class="contact-para3-4">
+          Let's Work Together.
+        </p>
+        <p class="contact-para3-4">
+          Drop Me A Line.
+        </p>
+      </div>
+      <div class="contact-row3" style="display: grid;
+        grid-template-columns: 1fr 1fr;">
+        <div>
+          <div>
+            <p class="contact-row3-col1">Name</p>
+            <input class="contact-row3-col1-box" type="text" placeholder="Name">
+          </div>
+          <div>
+            <p class="contact-row3-col1">Email Address</p>
+            <input class="contact-row3-col1-box" type="text" placeholder="e.g. abcde@gmail.com">
+          </div>
+          <div>
+            <p class="contact-row3-col1">Date for Appointment</p>
+            <input class="contact-row3-col1-box" type="text" placeholder="e.g. 01-08-2022">
+          </div>
+          <div>
+            <button class="contact-submit">Submit</button>
+          </div>
+        </div>
+      <div>
+        <p class="contact-row3-col2">Message</p>
+        <input class="contact-row3-col2-box" type="text" placeholder="Your message here...">
+      </div>
+    </div>
+  
+      <!-- <div class="row3" style="display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 2fr;">
+        <div style="background-color:red;">.</div>
+        <div style="background-color: blue;">.</div>
+        <div style="background-color:gray;">.</div>
+        <div style="background-color:yellow;">.</div>
+      </div> -->
+
+      <div style="margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr 15fr;
+        row-gap: 20px;
+        column-gap: 0px;">
+    
+        <div style="background-color:rgb(253, 92, 92); height: 30px;"></div>
+        <div style="background-color: rgb(6, 85, 255); height: 30px;"></div>
+        <div style="background-color:white; height: 30px;"></div>
+        <div style="background-color: rgb(248, 248, 51); height: 30px;"></div>
+        <!-- <div style="background-color:aqua; height: 150px;">1fr</div>
+        <div style="background-color: pink; height: 150px;">1fr</div> -->
+      </div>
+    </div>
+  </body>
+</html>
